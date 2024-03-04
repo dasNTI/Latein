@@ -15,12 +15,14 @@ public class Paper : MonoBehaviour
     public float SlideDuration = 0.75f;
     public Sprite CompanySprite;
     public LayerMask BoardLayer;
+    public GameObject PaperItem;
 
     private SpriteRenderer sr;
     private SpriteRenderer childSr;
     private BoxCollider2D bc;
     void Start()
     {
+        if (transform.position.x == 12) return;
         sr = GetComponent<SpriteRenderer>();
         bc = GetComponent<BoxCollider2D>();
         childSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -63,6 +65,31 @@ public class Paper : MonoBehaviour
     void Update()
     {
         if (!Input.GetMouseButtonUp(0)) return;
-        if (!bc.IsTouchingLayers(BoardLayer)) return;
+        if (Board.CurrentDraggingBc == null || !bc.OverlapPoint(Board.CurrentDraggingBc.transform.position)) return;
+        GameObject CurrentBoard = Board.CurrentDraggingBc.gameObject;
+        Board board = CurrentBoard.GetComponent<Board>();
+        if (board.GoalPaperPosition != Position)
+        {
+            return;
+        }
+
+        CurrentBoard.transform.DOKill();
+        Board.CurrentDraggingBc = null;
+        CurrentBoard.transform.DOScale(Vector3.one, .5f);
+        CurrentBoard.transform.DOMove(transform.position, .5f).OnComplete(() =>
+        {
+            ElementGenerator.LastPaperPosition = Position;
+            ElementGenerator.LastBoardPosition = board.Position;
+            Destroy(CurrentBoard);
+            Destroy(childSr.gameObject);
+            StartCoroutine(Animate(AnimationDirection.Closing, () =>
+            {
+                GameObject item = Instantiate(PaperItem);
+                item.GetComponent<PaperItem>().Animate(transform.position);
+                GameObject.Find("Generator").GetComponent<ElementGenerator>().Invoke("NewPaper", 2f);
+                GameObject.Find("Generator").GetComponent<ElementGenerator>().Invoke("NewBoard", 2f);
+                Destroy(gameObject);
+            }));
+        });
     }
 }

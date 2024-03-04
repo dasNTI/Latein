@@ -9,6 +9,9 @@ public class Board : MonoBehaviour
     public float DraggedScaleDuration = 0.2f;
     public float ReturnDuration = 0.5f;
 
+    public int GoalPaperPosition = 0;
+    public int Position = 0;
+
     Vector3 DragOffset;
     bool Draggable = true;
     bool Dragging = false;
@@ -16,6 +19,8 @@ public class Board : MonoBehaviour
 
     private SpriteRenderer sr;
     private BoxCollider2D bc;
+    public static BoxCollider2D CurrentDraggingBc = null;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -35,6 +40,7 @@ public class Board : MonoBehaviour
             {
                 Dragging = true;
                 DragOffset = transform.position - mouse;
+                CurrentDraggingBc = bc;
                 InitDragPosition = transform.position;
                 transform.DOScale(Vector3.one * DraggedScale, DraggedScaleDuration);
             }
@@ -44,7 +50,7 @@ public class Board : MonoBehaviour
         Vector3 Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Mouse.Scale(new Vector3(1, 1, 0));
         transform.position = Mouse + DragOffset - Vector3.forward;
-
+            
         if (Input.GetMouseButtonUp(0))
         {
             Draggable = false;
