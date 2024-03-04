@@ -18,17 +18,21 @@ public class ElementGenerator : MonoBehaviour
         SelectedCompanies = new List<Company>(Companies);
         for (int i = 0; i < 5; i++)
         {
-            int v = Random.Range(0, SelectedCompanies.Count);
-            SelectedCompanies.RemoveAt(i);
+            int v = Random.Range(0, SelectedCompanies.Count - 1);
+            SelectedCompanies.RemoveAt(v);
         }
+
+        NewPaper(0);
+        NewPaper(1);
+        NewPaper(2);
     }
 
     public void NewPaper(int position)
     {
         GameObject instance = Instantiate(PaperInstance);
-        instance.transform.position.Set(PaperPositions[position], 0, 0);
         
         Paper paper = instance.GetComponent<Paper>();
+        instance.transform.position = new Vector3(PaperPositions[position], paper.StartY, 0);
         paper.Position = position;
     }
 

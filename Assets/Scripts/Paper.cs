@@ -14,7 +14,7 @@ public class Paper : MonoBehaviour
     public float FrameDuration = 0.2f;
     public float SlideDuration = 0.75f;
     public Sprite CompanySprite;
-    public LayerMask CompanyLayer;
+    public LayerMask BoardLayer;
 
     private SpriteRenderer sr;
     private SpriteRenderer childSr;
@@ -25,7 +25,7 @@ public class Paper : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         childSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
 
-        transform.position = Vector3.up * StartY + Vector3.right * transform.position.x;
+        //transform.position = Vector3.up * StartY + Vector3.right * transform.position.x;
         transform.DOMoveY(EndY, SlideDuration).OnComplete(() =>
         {
             StartCoroutine(Animate(AnimationDirection.Opening, () =>
@@ -63,6 +63,6 @@ public class Paper : MonoBehaviour
     void Update()
     {
         if (!Input.GetMouseButtonUp(0)) return;
-        if (!bc.IsTouchingLayers(CompanyLayer)) return;
+        if (!bc.IsTouchingLayers(BoardLayer)) return;
     }
 }
