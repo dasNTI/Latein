@@ -8,9 +8,15 @@ public class Board : MonoBehaviour
     public float DraggedScale = 1.1f;
     public float DraggedScaleDuration = 0.2f;
     public float ReturnDuration = 0.5f;
+    public float StartY;
+    public float EndY;
+    public float FrameDuration = 0.2f;
+    public float SlideDuration = 0.75f;
+    public LayerMask PaperLM;
 
     public int GoalPaperPosition = 0;
     public int Position = 0;
+    public bool CorrectlyPlaced = false;
 
     Vector3 DragOffset;
     bool Draggable = true;
@@ -25,6 +31,9 @@ public class Board : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         bc = GetComponent<BoxCollider2D>();
+        if (transform.position.x == 12) return;
+
+        transform.DOMoveY(EndY, SlideDuration);
     }
 
     // Update is called once per frame
@@ -55,11 +64,23 @@ public class Board : MonoBehaviour
         {
             Draggable = false;
             Dragging = false;
-            transform.DOScale(Vector3.one, DraggedScaleDuration);
-            transform.DOMove(InitDragPosition, ReturnDuration).OnComplete(() =>
-            {
-                Draggable = true;
-            });
+            Invoke("CheckTouching", 2 * Time.deltaTime);
         }
+    }
+
+    void CheckTouching()
+    {
+        if (!CorrectlyPlaced) Return();
+    }
+
+    public void Return()
+    {
+        Draggable = false;
+        Dragging = false;
+        transform.DOScale(Vector3.one, DraggedScaleDuration);
+        transform.DOMove(InitDragPosition, ReturnDuration).OnComplete(() =>
+        {
+            Draggable = true;
+        });
     }
 }

@@ -27,6 +27,10 @@ public class ElementGenerator : MonoBehaviour
         NewPaper(0);
         NewPaper(1);
         NewPaper(2);
+
+        NewBoard(0);
+        NewBoard(1);
+        NewBoard(2);
     }
 
     public void NewPaper(int position = -1)
@@ -45,7 +49,12 @@ public class ElementGenerator : MonoBehaviour
 
     public void NewBoard(int position = -1)
     {
+        if (position == -1) position = LastBoardPosition;
+        GameObject instance = Instantiate(BoardInstance);
 
+        Board board = instance.GetComponent<Board>();
+        instance.transform.position = new Vector3(BoardPositions[position], board.StartY, 0);
+        board.Position = position;
     }
     void NewBoard()
     {
@@ -58,5 +67,5 @@ public class Company
 {
     public Sprite Logo;
     public Sprite Board;
-    public AudioClip Explaination;
+    public Voiceline Explaination;
 }

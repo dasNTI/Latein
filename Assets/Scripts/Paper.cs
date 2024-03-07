@@ -20,19 +20,24 @@ public class Paper : MonoBehaviour
     private SpriteRenderer sr;
     private SpriteRenderer childSr;
     private BoxCollider2D bc;
+    private bool available = false;
+
+    private Vector3 BoardSlidePosition;
     void Start()
     {
-        if (transform.position.x == 12) return;
         sr = GetComponent<SpriteRenderer>();
         bc = GetComponent<BoxCollider2D>();
         childSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        if (transform.position.x == 12) return;
 
         //transform.position = Vector3.up * StartY + Vector3.right * transform.position.x;
         transform.DOMoveY(EndY, SlideDuration).OnComplete(() =>
         {
+            BoardSlidePosition = transform.position + Vector3.back * 2;
             StartCoroutine(Animate(AnimationDirection.Opening, () =>
             {
                 childSr.sprite = CompanySprite;
+                available = true;
             }));
         });
     }
@@ -64,19 +69,21 @@ public class Paper : MonoBehaviour
 
     void Update()
     {
+        if (!available) return;
         if (!Input.GetMouseButtonUp(0)) return;
         if (Board.CurrentDraggingBc == null || !bc.OverlapPoint(Board.CurrentDraggingBc.transform.position)) return;
         GameObject CurrentBoard = Board.CurrentDraggingBc.gameObject;
         Board board = CurrentBoard.GetComponent<Board>();
         if (board.GoalPaperPosition != Position)
         {
+            board.Return();
             return;
         }
 
-        CurrentBoard.transform.DOKill();
-        Board.CurrentDraggingBc = null;
+        board.CorrectlyPlaced = true;
+        
         CurrentBoard.transform.DOScale(Vector3.one, .5f);
-        CurrentBoard.transform.DOMove(transform.position, .5f).OnComplete(() =>
+        CurrentBoard.transform.DOMove(BoardSlidePosition, .5f).OnComplete(() =>
         {
             ElementGenerator.LastPaperPosition = Position;
             ElementGenerator.LastBoardPosition = board.Position;
@@ -91,5 +98,6 @@ public class Paper : MonoBehaviour
                 Destroy(gameObject);
             }));
         });
+        Board.CurrentDraggingBc = null;
     }
 }
