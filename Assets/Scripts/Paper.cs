@@ -28,7 +28,7 @@ public class Paper : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         bc = GetComponent<BoxCollider2D>();
         childSr = transform.GetChild(0).GetComponent<SpriteRenderer>();
-        if (transform.position.x == 12) return;
+        if (transform.position.x == 15) return;
 
         //transform.position = Vector3.up * StartY + Vector3.right * transform.position.x;
         transform.DOMoveY(EndY, SlideDuration).OnComplete(() =>

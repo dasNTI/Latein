@@ -55,10 +55,12 @@ public class ElementGenerator : MonoBehaviour
         Board board = instance.GetComponent<Board>();
         instance.transform.position = new Vector3(BoardPositions[position], board.StartY, 0);
         board.Position = position;
+        board.GoalPaperPosition = position;
     }
     void NewBoard()
     {
         NewBoard(-1);
+
     }
 }
 

@@ -13,6 +13,7 @@ public class Board : MonoBehaviour
     public float FrameDuration = 0.2f;
     public float SlideDuration = 0.75f;
     public LayerMask PaperLM;
+    public static bool available = true;
 
     public int GoalPaperPosition = 0;
     public int Position = 0;
@@ -42,6 +43,7 @@ public class Board : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (!Draggable) return;
+            if (!available) return;
             Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouse.Scale(new Vector3(1, 1, 0));
 
@@ -63,6 +65,7 @@ public class Board : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             Draggable = false;
+            available = false;
             Dragging = false;
             Invoke("CheckTouching", 2 * Time.deltaTime);
         }
@@ -77,6 +80,7 @@ public class Board : MonoBehaviour
     {
         Draggable = false;
         Dragging = false;
+        available = true;
         transform.DOScale(Vector3.one, DraggedScaleDuration);
         transform.DOMove(InitDragPosition, ReturnDuration).OnComplete(() =>
         {

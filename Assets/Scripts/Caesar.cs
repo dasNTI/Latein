@@ -50,6 +50,7 @@ public class Caesar : MonoBehaviour
                     yield return new WaitForSecondsRealtime(FrameDuration);
                 }
                 eyes.SetDirection(0);
+                Board.available = true;
             }
         }
         StartCoroutine(animate());
