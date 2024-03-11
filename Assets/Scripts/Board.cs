@@ -22,6 +22,7 @@ public class Board : MonoBehaviour
     Vector3 DragOffset;
     bool Draggable = true;
     bool Dragging = false;
+    bool Locked = false;
     Vector3 InitDragPosition;
 
     private SpriteRenderer sr;
@@ -44,6 +45,7 @@ public class Board : MonoBehaviour
         {
             if (!Draggable) return;
             if (!available) return;
+            if (Locked) return;
             Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouse.Scale(new Vector3(1, 1, 0));
 
@@ -86,5 +88,18 @@ public class Board : MonoBehaviour
         {
             Draggable = true;
         });
+
+        Locked = true;
+        DOTween.To(() => sr.material.GetFloat("_Mix"), x => sr.material.SetFloat("_Mix", x), 0.75f, 1f);
+
+        sr.material.SetFloat("_Progress", 0);
+        DOTween.To(() => sr.material.GetFloat("_Progress"), x => sr.material.SetFloat("_Progress", x), 1, 5f);
+        Invoke("Unlock", 5f);
+    }
+
+    void Unlock()
+    {
+        Locked = false;
+        DOTween.To(() => sr.material.GetFloat("_Mix"), x => sr.material.SetFloat("_Mix", x), 0, 1f);
     }
 }

@@ -15,6 +15,9 @@ public class ElementGenerator : MonoBehaviour
     public static int LastBoardPosition = 0;
     public static int LastPaperPosition = 0;
 
+    private int[] currentBoards = new int[3];
+    private int[] currentPapers = new int[3];
+
     void Start()
     {
         SelectedCompanies = new List<Company>(Companies);
