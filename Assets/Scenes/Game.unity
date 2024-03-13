@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 143961364}
   m_Layer: 6
   m_Name: BoardTemplate
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,9 +164,11 @@ MonoBehaviour:
   PaperLM:
     serializedVersion: 2
     m_Bits: 128
-  GoalPaperPosition: 0
   Position: 0
   CorrectlyPlaced: 0
+  MainWord: {fileID: 1377827693}
+  Subtitle: {fileID: 1807243945}
+  CompanyIndex: 0
 --- !u!61 &143961365
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -276,7 +278,9 @@ Transform:
   m_LocalPosition: {x: 14.36, y: -4.21, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1377827695}
+  - {fileID: 1807243947}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &258433671
@@ -584,132 +588,158 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Companies:
   - Logo: {fileID: 21300000, guid: 8f1ccdc14dc419c48969d3f22a6573eb, type: 3}
-    Board: {fileID: 0}
+    MainWord: "T\xE4tig"
+    Origin: lat. activus
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 08f9098242a61624ca490ac0a1da6dd0, type: 3}
-    Board: {fileID: 0}
+    MainWord: "N\xE4hren"
+    Origin: lat. alere
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: fb2a78bc5d111f64e936fa6ae51210d9, type: 3}
-    Board: {fileID: 0}
+    MainWord: "H\xF6ren"
+    Origin: lat. audire
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 0b92e5d2605c7ac439f94c9547a63fd1, type: 3}
-    Board: {fileID: 0}
+    MainWord: Gut + Wasser
+    Origin: lat. bonus + aqua
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 18b3639cb7c84114d848d9a3ba036bd3, type: 3}
-    Board: {fileID: 0}
+    MainWord: Warm
+    Origin: lat. calidus
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 11e68af3830efe848a67af5095978b1f, type: 3}
-    Board: {fileID: 0}
+    MainWord: "N\xE4chsten-liebe"
+    Origin: lat. caritas
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: e2d4c306aa7e39243a612842fffab7b9, type: 3}
-    Board: {fileID: 0}
+    MainWord: "Gl\xFCcklich"
+    Origin: lat. felix
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: fbaa21668841564459057a23b4577f61, type: 3}
-    Board: {fileID: 0}
+    MainWord: Gottesbote
+    Origin: Hermes
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 27f90dcc4003e944e90015861d65c1c3, type: 3}
-    Board: {fileID: 0}
+    MainWord: "Sch\xF6n + Lippen"
+    Origin: lat. bellus + labium
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 25fc61488c04260439b2ff50ab2437e6, type: 3}
-    Board: {fileID: 0}
+    MainWord: "Gro\xDF"
+    Origin: lat. magnus
     Explaination:
       audio: {fileID: 0}
       frames: 
-  - Logo: {fileID: 21300000, guid: c3504213060201c4e8618af8864f03bb, type: 3}
-    Board: {fileID: 0}
+  - Logo: {fileID: 21300000, guid: 0015f2d3d970ce2409a89e6b9fb7a3b2, type: 3}
+    MainWord: "Gott der H\xE4ndler und Diebe"
+    Origin: Mercurius
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: fb37fda94e8eb9f45b95e300c72766ec, type: 3}
-    Board: {fileID: 0}
+    MainWord: Wunder
+    Origin: lat. miracula
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: de9015ac280ea8a41b7dc3a0ecfd525a, type: 3}
-    Board: {fileID: 0}
+    MainWord: Berg
+    Origin: lat. mons
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: f5c6992170e2bb54da4346e893c5ec96, type: 3}
-    Board: {fileID: 0}
+    MainWord: "R\xF6mischer Kaiser"
+    Origin: Kaiser Nero
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 67faed7577c79084f82c16f94f246606, type: 3}
-    Board: {fileID: 0}
+    MainWord: Sieg
+    Origin: "gr. n\xEDk\u0113"
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 2b174df87eafaeb44bb6b0413c87eff0, type: 3}
-    Board: {fileID: 0}
+    MainWord: "schneewei\xDF"
+    Origin: lat. niveus
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 41ea0db8373510a4fb38466880cfea57, type: 3}
-    Board: {fileID: 0}
+    MainWord: Nacht
+    Origin: lat. nox
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 0247e5c0a8e77024baed17eb8c397857, type: 3}
-    Board: {fileID: 0}
+    MainWord: "Hausg\xF6tter"
+    Origin: Penaten
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 24dde50c93300754aa4009940a659159, type: 3}
-    Board: {fileID: 0}
+    MainWord: Lunge
+    Origin: lat. pulmo
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 1d285281f2a033c43862f459d95f2a50, type: 3}
-    Board: {fileID: 0}
+    MainWord: Gott der Ackersaat
+    Origin: Saturnus
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: df894f438e483d6478aac486e455c464, type: 3}
-    Board: {fileID: 0}
+    MainWord: Zeit
+    Origin: lat. tempus
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 631899a2b2a75f243b19a0562c3933d6, type: 3}
-    Board: {fileID: 0}
+    MainWord: Liebe
+    Origin: lat. venus
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: bd17dccd69f2e824d882d03a99944ec1, type: 3}
-    Board: {fileID: 0}
+    MainWord: Jungfrau
+    Origin: lat. virga
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: e8d1d7a47fdb4bf498c52200a22be792, type: 3}
-    Board: {fileID: 0}
+    MainWord: Leben enthaltend
+    Origin: lat. vitalis
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: 03fe762b4cd38be4e9ded7d44ccaff5a, type: 3}
-    Board: {fileID: 0}
+    MainWord: Drehen
+    Origin: lat. volvere
     Explaination:
       audio: {fileID: 0}
       frames: 
   - Logo: {fileID: 21300000, guid: eef87b73a94d5504889cc406aba339b4, type: 3}
-    Board: {fileID: 0}
+    MainWord: Stimme
+    Origin: lat. vox
     Explaination:
       audio: {fileID: 0}
       frames: 
@@ -924,6 +954,177 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
+--- !u!1 &1377827692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1377827695}
+  - component: {fileID: 1377827694}
+  - component: {fileID: 1377827693}
+  m_Layer: 6
+  m_Name: Main Word
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1377827693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377827692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 7908790c8ed9c10499fc145064dde5e7, type: 2}
+  m_sharedMaterial: {fileID: -7813940651104518023, guid: 7908790c8ed9c10499fc145064dde5e7, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 3.44
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1377827694}
+  m_maskType: 0
+--- !u!23 &1377827694
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377827692}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -7813940651104518023, guid: 7908790c8ed9c10499fc145064dde5e7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!224 &1377827695
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377827692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 143961367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2.3129, y: 0.5782}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1416183184
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +1156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CatchPosition: {x: -5.4, y: 1.16, z: -3}
+  IdleTimer: 10
   Frames:
   - sprite: {fileID: 21300000, guid: c428ad562e39d2d48aca91e939193c4b, type: 3}
     MouthPosition: {x: -1.66, y: 3.68, z: -1, w: 0}
@@ -1181,6 +1383,7 @@ MonoBehaviour:
   FrameDuration: 0.1
   SlideDuration: 0.75
   CompanySprite: {fileID: 21300000, guid: 0fc456d8669e0ac4c923ab61bbd5da88, type: 3}
+  CompanyIndex: 0
   BoardLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1409,6 +1612,177 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1807243944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807243947}
+  - component: {fileID: 1807243946}
+  - component: {fileID: 1807243945}
+  m_Layer: 6
+  m_Name: Main Word (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1807243945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807243944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 7908790c8ed9c10499fc145064dde5e7, type: 2}
+  m_sharedMaterial: {fileID: -7813940651104518023, guid: 7908790c8ed9c10499fc145064dde5e7, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 3.44
+  m_fontSizeMax: 51.36
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 1024
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1807243946}
+  m_maskType: 0
+--- !u!23 &1807243946
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807243944}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -7813940651104518023, guid: 7908790c8ed9c10499fc145064dde5e7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!224 &1807243947
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807243944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 143961367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.71}
+  m_SizeDelta: {x: 2.3129, y: 0.4183}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1850805338
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class Paper : MonoBehaviour
     public float FrameDuration = 0.2f;
     public float SlideDuration = 0.75f;
     public Sprite CompanySprite;
+    public int CompanyIndex;
     public LayerMask BoardLayer;
     public GameObject PaperItem;
 
@@ -72,9 +73,10 @@ public class Paper : MonoBehaviour
         if (!available) return;
         if (!Input.GetMouseButtonUp(0)) return;
         if (Board.CurrentDraggingBc == null || !bc.OverlapPoint(Board.CurrentDraggingBc.transform.position)) return;
+
         GameObject CurrentBoard = Board.CurrentDraggingBc.gameObject;
         Board board = CurrentBoard.GetComponent<Board>();
-        if (board.GoalPaperPosition != Position)
+        if (board.CompanyIndex != CompanyIndex)
         {
             board.Return();
             return;
@@ -93,8 +95,7 @@ public class Paper : MonoBehaviour
             {
                 GameObject item = Instantiate(PaperItem);
                 item.GetComponent<PaperItem>().Animate(transform.position);
-                GameObject.Find("Generator").GetComponent<ElementGenerator>().Invoke("NewPaper", 2f);
-                GameObject.Find("Generator").GetComponent<ElementGenerator>().Invoke("NewBoard", 2f);
+                GameObject.Find("Generator").GetComponent<ElementGenerator>().Invoke("NewSet", 2f);
                 Destroy(gameObject);
             }));
         });

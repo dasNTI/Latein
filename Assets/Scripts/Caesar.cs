@@ -5,6 +5,7 @@ using UnityEngine;
 public class Caesar : MonoBehaviour
 {
     public Vector3 CatchPosition;
+    public int IdleTimer = 30;
 
     public Frame[] Frames;
     public float FrameDuration;
@@ -13,6 +14,7 @@ public class Caesar : MonoBehaviour
     private SpriteRenderer sr;
     private Transform EyeTransform;
     private Transform MouthTransform;
+    private bool HintsShown = false;
 
     void Start()
     {
@@ -20,6 +22,8 @@ public class Caesar : MonoBehaviour
         EyeTransform = transform.GetChild(0);
         MouthTransform = transform.GetChild(1);
         sr = GetComponent<SpriteRenderer>();
+
+        Invoke("ShowHints", IdleTimer);
     }
 
     public void AnimateCatch(int phase)
@@ -28,6 +32,7 @@ public class Caesar : MonoBehaviour
         {
             if (phase == 0)
             {
+                if (HintsShown) HideHints();
                 eyes.SetDirection(1);
                 for (int i = 0; i < 3; i++)
                 {
@@ -38,6 +43,8 @@ public class Caesar : MonoBehaviour
                 }
             }else
             {
+                CancelInvoke();
+                Invoke("ShowHints", IdleTimer);
                 eyes.SetDirection(2);
                 for (int i = 3; i < Frames.Length; i++)
                 {
@@ -54,6 +61,24 @@ public class Caesar : MonoBehaviour
             }
         }
         StartCoroutine(animate());
+    }
+
+    void ShowHints()
+    {
+        Debug.Log("yeet");
+        HintsShown = true;
+        foreach (var board in GameObject.FindGameObjectsWithTag("Board"))
+        {
+            board.GetComponent<Board>().ShowHint();
+        }
+    }
+    void HideHints()
+    {
+        HintsShown = false;
+        foreach (var board in GameObject.FindGameObjectsWithTag("Board"))
+        {
+            board.GetComponent<Board>().HideHint();
+        }
     }
 }
 

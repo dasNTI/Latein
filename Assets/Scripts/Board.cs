@@ -15,9 +15,12 @@ public class Board : MonoBehaviour
     public LayerMask PaperLM;
     public static bool available = true;
 
-    public int GoalPaperPosition = 0;
     public int Position = 0;
     public bool CorrectlyPlaced = false;
+
+    public TMPro.TextMeshPro MainWord;
+    public TMPro.TextMeshPro Subtitle;
+    public int CompanyIndex;
 
     Vector3 DragOffset;
     bool Draggable = true;
@@ -101,5 +104,14 @@ public class Board : MonoBehaviour
     {
         Locked = false;
         DOTween.To(() => sr.material.GetFloat("_Mix"), x => sr.material.SetFloat("_Mix", x), 0, 1f);
+    }
+
+    public void ShowHint()
+    {
+        DOTween.To(() => Subtitle.color, x => Subtitle.color = x, Color.white, 1f);
+    }
+    public void HideHint()
+    {
+        DOTween.To(() => Subtitle.color, x => Subtitle.color = x, Color.clear, 1f);
     }
 }
