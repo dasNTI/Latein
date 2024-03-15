@@ -18,7 +18,6 @@ public class ElementGenerator : MonoBehaviour
 
     public static int[] CurrentBoards = new int[3];
     public static int[] CurrentPapers = new int[3];
-    private List<int> PossibleBoards = new List<int>();
     private int CompanyListIndex = 0;
 
     void Start()
@@ -28,10 +27,6 @@ public class ElementGenerator : MonoBehaviour
         {
             int v = Random.Range(0, SelectedCompanies.Count);
             SelectedCompanies.RemoveAt(v);
-        }
-
-        for (int i = 0; i < SelectedCompanies.Count; i++) {
-            PossibleBoards.Add(i);
         }
 
         for (int i = 0; i < 3; i++)
@@ -87,7 +82,6 @@ public class ElementGenerator : MonoBehaviour
         board.MainWord.text = SelectedCompanies[index].MainWord;
         board.Subtitle.text = SelectedCompanies[index].Origin;
         CurrentBoards[position] = index;
-        PossibleBoards.Remove(index);
         board.CompanyIndex = CompanyListIndex;
         board.Position = position;
     }
