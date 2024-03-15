@@ -17,6 +17,7 @@ public class Paper : MonoBehaviour
     public int CompanyIndex;
     public LayerMask BoardLayer;
     public GameObject PaperItem;
+    public Voiceline Voiceline;
 
     private SpriteRenderer sr;
     private SpriteRenderer childSr;
@@ -88,6 +89,7 @@ public class Paper : MonoBehaviour
         CurrentBoard.transform.DOScale(Vector3.one, .5f);
         CurrentBoard.transform.DOMove(BoardSlidePosition, .5f).OnComplete(() =>
         {
+            GameObject.Find("Mouth").GetComponent<Mouth>().Speak(Voiceline);
             ElementGenerator.LastPaperPosition = Position;
             ElementGenerator.LastBoardPosition = board.Position;
             Destroy(CurrentBoard);

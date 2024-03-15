@@ -15,7 +15,7 @@ public class Mouth : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
 
-        Speak(test);
+        //Speak(test);
     }
 
     // Update is called once per frame

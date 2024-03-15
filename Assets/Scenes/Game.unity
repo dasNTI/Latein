@@ -591,157 +591,157 @@ MonoBehaviour:
     MainWord: "T\xE4tig"
     Origin: lat. activus
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 34e54d3c8a1153346a2d860ca04bff68, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 08f9098242a61624ca490ac0a1da6dd0, type: 3}
     MainWord: "N\xE4hren"
     Origin: lat. alere
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: e7c346241465b504e9007eefd9ed15e7, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: fb2a78bc5d111f64e936fa6ae51210d9, type: 3}
     MainWord: "H\xF6ren"
     Origin: lat. audire
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 035725a73f31a0048bf28e7d6e19e1a9, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 0b92e5d2605c7ac439f94c9547a63fd1, type: 3}
     MainWord: Gut + Wasser
     Origin: lat. bonus + aqua
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 66a8ff57f79290d44bf4492ac986a8ae, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 18b3639cb7c84114d848d9a3ba036bd3, type: 3}
     MainWord: Warm
     Origin: lat. calidus
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: e50aa3ac35e1288448c93e0d56bc6205, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 11e68af3830efe848a67af5095978b1f, type: 3}
     MainWord: "N\xE4chsten-liebe"
     Origin: lat. caritas
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 2077865eb2257f641b485abfef8cee4f, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: e2d4c306aa7e39243a612842fffab7b9, type: 3}
     MainWord: "Gl\xFCcklich"
     Origin: lat. felix
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 8d6051ecce5095147acf93fbd847cf10, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: fbaa21668841564459057a23b4577f61, type: 3}
     MainWord: Gottesbote
     Origin: Hermes
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 250fc4ba6b6028a41a7c1e48864fa885, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 27f90dcc4003e944e90015861d65c1c3, type: 3}
     MainWord: "Sch\xF6n + Lippen"
     Origin: lat. bellus + labium
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 239b67e27baeb064f85f8ad2ac66d7e0, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 25fc61488c04260439b2ff50ab2437e6, type: 3}
     MainWord: "Gro\xDF"
     Origin: lat. magnus
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 7e2ba38c558dce34ba4936a1bd93dab9, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 0015f2d3d970ce2409a89e6b9fb7a3b2, type: 3}
     MainWord: "Gott der H\xE4ndler und Diebe"
     Origin: Mercurius
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 51552a6d2b05cf24e8fbd9044bdac210, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: fb37fda94e8eb9f45b95e300c72766ec, type: 3}
     MainWord: Wunder
     Origin: lat. miracula
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 835723db684497e4da15fa6d1dbf1af2, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: de9015ac280ea8a41b7dc3a0ecfd525a, type: 3}
     MainWord: Berg
     Origin: lat. mons
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 0232df0be717925419ad44f2fd5302c8, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: f5c6992170e2bb54da4346e893c5ec96, type: 3}
     MainWord: "R\xF6mischer Kaiser"
     Origin: Kaiser Nero
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: d59b2838dfbc0924fbc041a35cf4a9c7, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 67faed7577c79084f82c16f94f246606, type: 3}
     MainWord: Sieg
     Origin: "gr. n\xEDk\u0113"
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 18333dbf2acd33844a5384da0ce7bdef, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 2b174df87eafaeb44bb6b0413c87eff0, type: 3}
     MainWord: "schneewei\xDF"
     Origin: lat. niveus
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: d2f368255f98da64f8528d7dcd1d8c30, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 41ea0db8373510a4fb38466880cfea57, type: 3}
     MainWord: Nacht
     Origin: lat. nox
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 7ad326e82bf9da44c8ea1edd3bb91327, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 0247e5c0a8e77024baed17eb8c397857, type: 3}
     MainWord: "Hausg\xF6tter"
     Origin: Penaten
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 88da109d60a2a3641b4dbc4783574df6, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 24dde50c93300754aa4009940a659159, type: 3}
     MainWord: Lunge
     Origin: lat. pulmo
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: e408d3efaa7104641b42cda16b018ea8, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 1d285281f2a033c43862f459d95f2a50, type: 3}
     MainWord: Gott der Ackersaat
     Origin: Saturnus
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 9ad02ca68378d624b811bb72ccc67795, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: df894f438e483d6478aac486e455c464, type: 3}
     MainWord: Zeit
     Origin: lat. tempus
     Explaination:
-      audio: {fileID: 0}
-      frames: 
-  - Logo: {fileID: 21300000, guid: 631899a2b2a75f243b19a0562c3933d6, type: 3}
-    MainWord: Liebe
-    Origin: lat. venus
-    Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 301745142c23d5b498456cf22e3fa031, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: bd17dccd69f2e824d882d03a99944ec1, type: 3}
     MainWord: Jungfrau
     Origin: lat. virga
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: b7a1a4fc927146a44a007ffc197357b4, type: 3}
       frames: 
-  - Logo: {fileID: 21300000, guid: e8d1d7a47fdb4bf498c52200a22be792, type: 3}
-    MainWord: Leben enthaltend
-    Origin: lat. vitalis
+  - Logo: {fileID: 21300000, guid: 631899a2b2a75f243b19a0562c3933d6, type: 3}
+    MainWord: Liebe
+    Origin: lat. venus
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: b4a4b082816912444ba809867cc57b60, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: 03fe762b4cd38be4e9ded7d44ccaff5a, type: 3}
     MainWord: Drehen
     Origin: lat. volvere
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: ad716055e0c2a5f4c80a0010ed6636cb, type: 3}
+      frames: 
+  - Logo: {fileID: 21300000, guid: e8d1d7a47fdb4bf498c52200a22be792, type: 3}
+    MainWord: Leben enthaltend
+    Origin: lat. vitalis
+    Explaination:
+      audio: {fileID: 8300000, guid: 61b943b9fb9540949a8bf0efe7420702, type: 3}
       frames: 
   - Logo: {fileID: 21300000, guid: eef87b73a94d5504889cc406aba339b4, type: 3}
     MainWord: Stimme
     Origin: lat. vox
     Explaination:
-      audio: {fileID: 0}
+      audio: {fileID: 8300000, guid: 07a449704b8d2b54fb6f8ad7ecf6b8c5, type: 3}
       frames: 
   PaperInstance: {fileID: 1621374426}
   BoardInstance: {fileID: 143961363}
@@ -1388,6 +1388,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   PaperItem: {fileID: 258433671}
+  Voiceline:
+    audio: {fileID: 0}
+    frames: 
 --- !u!212 &1621374428
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1796,7 +1799,7 @@ GameObject:
   - component: {fileID: 1850805342}
   - component: {fileID: 1850805341}
   m_Layer: 0
-  m_Name: mouth_closed
+  m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1889,7 +1892,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a9935b504d07d6642a23751b100e18e7, type: 3}
   - {fileID: 21300000, guid: f3f414cf17450e547b53bd28f65838b6, type: 3}
   test:
-    audio: {fileID: 8300000, guid: 549e4441b33cb2a4e8cd2fa2652cb09b, type: 3}
+    audio: {fileID: 8300000, guid: a9508a9a4e87a3242a629727391cf783, type: 3}
     frames: 
 --- !u!82 &1850805342
 AudioSource:
