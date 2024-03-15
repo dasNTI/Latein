@@ -84,6 +84,7 @@ public class Paper : MonoBehaviour
 
         board.CorrectlyPlaced = true;
         
+        Board.CurrentBoards[Array.IndexOf(Board.CurrentBoards, CompanyIndex)] = -1;
         CurrentBoard.transform.DOScale(Vector3.one, .5f);
         CurrentBoard.transform.DOMove(BoardSlidePosition, .5f).OnComplete(() =>
         {
