@@ -65,7 +65,6 @@ public class Caesar : MonoBehaviour
 
     void ShowHints()
     {
-        Debug.Log("yeet");
         HintsShown = true;
         foreach (var board in GameObject.FindGameObjectsWithTag("Board"))
         {

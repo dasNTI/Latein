@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CatchPosition: {x: -5.4, y: 1.16, z: -3}
-  IdleTimer: 10
+  IdleTimer: 30
   Frames:
   - sprite: {fileID: 21300000, guid: c428ad562e39d2d48aca91e939193c4b, type: 3}
     MouthPosition: {x: -1.66, y: 3.68, z: -1, w: 0}
